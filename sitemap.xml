@@ -1,24 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- REPLACE: Update lastmod dates and domain once live -->
-  <url><loc>https://aitoolpilot.com/</loc><lastmod>2026-05-27</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://aitoolpilot.com/about.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://aitoolpilot.com/contact.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://aitoolpilot.com/privacy.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://aitoolpilot.com/affiliate-disclosure.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
-  <!-- Reviews -->
-  <url><loc>https://aitoolpilot.com/reviews/jasper-ai.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://aitoolpilot.com/reviews/copy-ai.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://aitoolpilot.com/reviews/zapier.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://aitoolpilot.com/reviews/make.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://aitoolpilot.com/reviews/durable.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://aitoolpilot.com/reviews/surferseo.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://aitoolpilot.com/reviews/pictory.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://aitoolpilot.com/reviews/descript.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://aitoolpilot.com/reviews/canva-pro.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <!-- Blog -->
-  <url><loc>https://aitoolpilot.com/blog/</loc><lastmod>2026-05-27</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://aitoolpilot.com/blog/zapier-vs-make.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://aitoolpilot.com/blog/jasper-surferseo-workflow.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://aitoolpilot.com/blog/100-dollar-ai-stack.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/</loc><lastmod>2026-10-12</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/about</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/contact</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/privacy</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/affiliate-disclosure</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/reviews/jasper-ai</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/reviews/copy-ai</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/reviews/zapier</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/reviews/make</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/reviews/durable</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/reviews/surferseo</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/reviews/pictory</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/reviews/descript</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/reviews/canva-pro</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/categories/ai-writing-tools</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/categories/ai-automation-tools</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/categories/ai-seo-tools</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/categories/ai-video-tools</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/categories/ai-website-builders</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/comparisons/jasper-vs-copy-ai</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/comparisons/surferseo-vs-neuronwriter</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/comparisons/zapier-vs-make</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/blog/</loc><lastmod>2026-10-12</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/blog/10-ai-tools-small-business-2026</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/blog/100-dollar-ai-stack</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/blog/ai-local-businesses-customers</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/blog/ai-tools-coaches-consultants</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/blog/ai-tools-marketing-agencies</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/blog/automate-small-business-ai</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/blog/jasper-surferseo-workflow</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.aitoolpilot.xyz/blog/zapier-vs-make</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

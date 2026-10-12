@@ -37,7 +37,8 @@ document.addEventListener('DOMContentLoaded', function () {
       btn.textContent = 'Subscribing…';
 
       // Replace NEWSLETTER_ENDPOINT with your actual endpoint (e.g. Mailchimp, ConvertKit, Beehiiv)
-      var endpoint = form.getAttribute('data-endpoint') || '';
+      var endpoint = form.getAttribute('data-endpoint') ||
+        (window.ATP_CONFIG && window.ATP_CONFIG.newsletterEndpoint) || '';
 
       if (!endpoint) {
         // Placeholder: simulate success

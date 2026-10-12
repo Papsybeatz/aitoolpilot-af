@@ -83,7 +83,7 @@ All affiliate links follow this pattern:
 3. Keep the `data-affiliate` attribute — it's used for click tracking
 4. Keep `rel="noopener sponsored"` for SEO compliance
 
-**Current affiliate links to replace** (search for `utm_source=aitoolpilot` across all files):
+**Current affiliate links to replace** — these are still PLACEHOLDER links (they point at the tool's homepage and earn nothing). Search for `utm_source=aitoolpilot` across all files, or open each review page below:
 
 | Tool | File | Replace URL With |
 |------|------|-----------------|
@@ -97,48 +97,46 @@ All affiliate links follow this pattern:
 | Descript | `reviews/descript.html` | Your Descript affiliate URL |
 | Canva Pro | `reviews/canva-pro.html` | Your Canva affiliate URL |
 
-## Newsletter Integration
+## Site Configuration (analytics + newsletter)
 
-The newsletter form in `index.html` uses a `data-endpoint` attribute:
+Everything is wired through one file: **`assets/js/config.js`**. Every page already
+loads it. Edit it once and the whole site updates.
 
-```html
-<form class="newsletter-form" data-endpoint="YOUR_ENDPOINT_URL">
+```js
+window.ATP_CONFIG = {
+  ga4Id: "",              // e.g. "G-ABC123XYZ" — leave "" to disable analytics
+  newsletterEndpoint: ""  // e.g. a ConvertKit form endpoint — leave "" for demo mode
+};
 ```
 
-**To connect your email provider:**
+### Analytics (GA4)
 
-1. Get your form submission endpoint URL from your provider:
-   - **Mailchimp**: Use their embedded form POST URL
-   - **ConvertKit**: Use their form API endpoint
-   - **Beehiiv**: Use their subscribe API URL
-2. Set `data-endpoint="https://your-endpoint-url"` on the form in `index.html`
-3. The JS in `assets/js/script.js` handles the POST request and shows success/error states
+1. Create a GA4 property at [analytics.google.com](https://analytics.google.com) →
+   **Admin → Data streams → Web** and copy the **Measurement ID** (`G-XXXXXXXXXX`).
+2. Paste it into `ga4Id` in `assets/js/config.js`. That's it — `assets/js/analytics.js`
+   loads gtag on every page.
 
-If `data-endpoint` is empty, the form shows a success message without submitting (useful for testing).
+Affiliate clicks are tracked automatically: `script.js` fires a
+`gtag('event', 'affiliate_click', { event_label: <tool> })` event for every link with a
+`data-affiliate` attribute.
 
-## Analytics Setup
+### Newsletter
 
-The site is pre-wired for Google Analytics. Add your GA4 measurement ID by inserting this snippet before `</head>` in every page:
+1. Get a form POST endpoint from your provider (ConvertKit/Kit is recommended):
+   - **ConvertKit**: `https://app.convertkit.com/forms/<FORM_ID>/subscriptions`
+   - **Beehiiv**: your subscribe API URL
+   - **Mailchimp**: embedded-form POST URL (note: Mailchimp needs form-encoded data,
+     not JSON — ConvertKit/Beehiiv work with the current JSON payload out of the box)
+2. Paste it into `newsletterEndpoint` in `assets/js/config.js`.
 
-```html
-<!-- REPLACE: G-XXXXXXXXXX with your GA4 Measurement ID -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
-```
-
-Affiliate click events are automatically tracked via `gtag('event', 'affiliate_click', ...)` in `script.js` once GA is loaded.
+Until an endpoint is set, the form runs in **demo mode** (shows success, stores nothing).
 
 ## MCP Integration
 
 To integrate with tgm-checkmate or any MCP-compatible system, expose the site's content via a JSON feed or webhook. The simplest approach:
 
 1. Create a `api/tools.json` file listing all reviewed tools with their affiliate URLs, ratings, and categories
-2. Point your MCP integration at `https://aitoolpilot.com/api/tools.json`
+2. Point your MCP integration at `https://www.aitoolpilot.xyz/api/tools.json`
 3. The MCP can then surface tool recommendations based on user queries
 
 ## What to Update Before Going Live
@@ -150,9 +148,10 @@ grep -r "REPLACE" --include="*.html" --include="*.md" .
 ```
 
 Key items:
-- `https://aitoolpilot.com` → your actual domain (if different)
-- `hello@aitoolpilot.com` → your actual contact email
-- `data-endpoint=""` → your newsletter provider endpoint
-- GA4 measurement ID → add to all pages
-- OG image paths → add actual images to `assets/img/`
 - Affiliate URLs → replace placeholder UTM URLs with real affiliate tracking URLs
+  (the single biggest blocker — the site earns nothing until this is done)
+- `ga4Id` in `assets/js/config.js` → your GA4 Measurement ID
+- `newsletterEndpoint` in `assets/js/config.js` → your provider endpoint
+- Contact email → `hello@aitoolpilot.xyz` (update in `contact.html`, `privacy.html`)
+  once the mailbox exists
+- OG images + favicon → already present in `assets/img/`; regenerate if you rebrand
