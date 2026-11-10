@@ -442,3 +442,71 @@ footer {
   .newsletter-form input[type="email"] { width: 100%; }
   .newsletter-form button { width: 100%; }
 }
+
+/* ============================================================
+   Comparison tables, FAQ & callouts (launch content)
+   ============================================================ */
+.comparison-table {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg-white);
+  margin: 1.5rem 0 2rem;
+}
+.comparison-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+  background: var(--bg-light);
+  border-bottom: 2px solid var(--border);
+  text-align: center;
+}
+.comparison-header .vs-column { display: none; }
+.comparison-header .tool-column h2 { font-size: 1.1rem; margin: 0; color: var(--text-dark); }
+.comparison-header .tool-column p { font-size: .82rem; color: var(--text-muted); margin: .25rem 0 0; }
+.comparison-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: .85rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  font-size: .95rem;
+}
+.comparison-row:last-child { border-bottom: 0; }
+.comparison-row .category {
+  grid-column: 1 / -1;
+  font-size: .72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--text-muted);
+  margin-bottom: -.3rem;
+}
+.comparison-row .win { background: rgba(106,17,203,.07); border-radius: 6px; padding: .15rem .4rem; font-weight: 600; }
+@media (max-width: 640px) {
+  .comparison-header { grid-template-columns: 1fr; }
+  .comparison-row { grid-template-columns: 1fr; gap: .35rem; }
+}
+
+.faq { margin: 2rem 0; }
+.faq details {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: .9rem 1.1rem;
+  margin-bottom: .6rem;
+  background: var(--bg-white);
+}
+.faq summary { cursor: pointer; font-weight: 700; color: var(--text-dark); }
+.faq details p { margin-top: .6rem; }
+
+.callout {
+  border-left: 4px solid var(--brand-accent);
+  background: #fff7f2;
+  padding: 1rem 1.2rem;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin: 1.5rem 0;
+}
+.callout p:last-child { margin-bottom: 0; }
+
+.content-newsletter { max-width: 860px; margin: 2.5rem auto 0; }
