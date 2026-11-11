@@ -51,14 +51,30 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
       }
 
-      fetch(endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: email })
-      })
+      // ConvertKit / Kit public form endpoints expect form-encoded "email_address"
+      // and do not reliably send CORS headers, so we use no-cors (fire-and-forget).
+      var isConvertKit = /(convertkit\.com|kit\.com)/i.test(endpoint);
+      var reqOpts;
+      if (isConvertKit) {
+        reqOpts = {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: 'email_address=' + encodeURIComponent(email)
+        };
+      } else {
+        reqOpts = {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email, EMAIL: email })
+        };
+      }
+
+      fetch(endpoint, reqOpts)
         .then(function (res) {
-          if (res.ok) {
-            showMsg('You\'re in! Check your inbox for your first AI tool pick.', 'success');
+          // With no-cors the response is opaque (status 0) — treat it as accepted.
+          if (res.ok || res.type === 'opaque' || res.status === 0) {
+            showMsg('You\'re in! Check your inbox to confirm your subscription.', 'success');
             form.reset();
           } else {
             showMsg('Something went wrong. Please try again.', 'error');

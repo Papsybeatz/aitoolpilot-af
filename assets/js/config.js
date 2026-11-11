@@ -12,5 +12,5 @@ window.ATP_CONFIG = {
   // Recommended: ConvertKit (kit.com) form endpoint, e.g.
   //   "https://app.convertkit.com/forms/1234567/subscriptions"
   // Leave "" to keep the form in demo mode (shows success, stores nothing).
-  newsletterEndpoint: ""
+  newsletterEndpoint: "https://app.kit.com/forms/10174030/subscriptions"
 };
