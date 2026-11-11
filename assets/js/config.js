@@ -6,7 +6,7 @@ window.ATP_CONFIG = {
   // Google Analytics 4 measurement ID, e.g. "G-ABC123XYZ".
   // Get it at analytics.google.com -> Admin -> Data streams.
   // Leave "" to keep analytics disabled.
-  ga4Id: "",
+  ga4Id: "G-GQX6T9DL2G",
 
   // Newsletter provider POST endpoint.
   // Recommended: ConvertKit (kit.com) form endpoint, e.g.
